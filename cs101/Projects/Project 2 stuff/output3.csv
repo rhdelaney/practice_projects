@@ -1,0 +1,7 @@
+Sort3,Insertion,Selection,Bubble,Merge,Quick
+Identical,2,3,2,12,10
+Ascend,2,3,2,13,7
+Descend,6,4,6,12,8
+RevDigit,2,3,2,13,7
+NegRevDigit,6,4,6,12,8
+Random,5,5,5,12,11

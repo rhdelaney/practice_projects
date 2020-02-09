@@ -1,0 +1,58 @@
+insertFirst 10
+insertFirst 20
+insertFirst 30
+insertFirst 40
+insertFirst 50
+insertFirst 60
+insertFirst 70
+insertFirst 80
+insertFirst 90
+gotoRank 2
+size
+currentRank
+currentValue
+display
+replace 100
+advance
+replace 999
+size
+currentRank
+currentValue
+display
+removeAndAdvance
+removeAndAdvance
+removeAndAdvance
+removeAndAdvance
+isLast
+removeAndAdvance
+isLast
+gotoFirst
+currentRank
+currentValue
+advance
+currentRank
+currentValue
+advance
+currentRank
+currentValue
+advance
+isNull
+currentRank
+currentValue
+advance
+isNull
+gotoLast
+currentRank
+currentValue
+retreat
+currentRank
+currentValue
+retreat
+currentRank
+currentValue
+retreat
+isNull
+currentRank
+currentValue
+retreat
+isNull

@@ -1,0 +1,61 @@
+This hollow diamond is generated iteratively:
+              X
+             X.X
+            X...X
+           X.....X
+          X.......X
+         X.........X
+        X...........X
+       X.............X
+      X...............X
+     X.................X
+    X...................X
+   X.....................X
+  X.......................X
+ X.........................X
+X...........................X
+ X.........................X
+  X.......................X
+   X.....................X
+    X...................X
+     X.................X
+      X...............X
+       X.............X
+        X...........X
+         X.........X
+          X.......X
+           X.....X
+            X...X
+             X.X
+              X
+
+This solid diamond is generated recursively:
+              X
+             XXX
+            XXXXX
+           XXXXXXX
+          XXXXXXXXX
+         XXXXXXXXXXX
+        XXXXXXXXXXXXX
+       XXXXXXXXXXXXXXX
+      XXXXXXXXXXXXXXXXX
+     XXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXXX
+   XXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXX
+   XXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXXXXXXXXXX
+     XXXXXXXXXXXXXXXXXXX
+      XXXXXXXXXXXXXXXXX
+       XXXXXXXXXXXXXXX
+        XXXXXXXXXXXXX
+         XXXXXXXXXXX
+          XXXXXXXXX
+           XXXXXXX
+            XXXXX
+             XXX
+              X
