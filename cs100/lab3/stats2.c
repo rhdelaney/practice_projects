@@ -31,13 +31,13 @@ void readData(int *array){
 }
 double findMean(int *array){
 	double result;
-	result=array[0]+array[1]+array[2]+array[3]+array[4];
+	result = array[0] + array[1] + array[2] + array[3] + array[4];
 	result= result/5.0;
 	return result;
 }
 double findVariance(int *array, double mean){
 	double result1;
-	result1=((array[0]-mean)*(array[0]-mean))+((array[1]-mean)*(array[1]-mean))+((array[2]-mean)*(array[2]-mean))+((array[3]-mean)*(array[3]-mean))+((array[4]-mean)*(array[4]-mean));
+	result1 = ((array[0] - mean) * (array[0] - mean)) + ((array[1] - mean) * (array[1] - mean)) + ((array[2] - mean) * (array[2] - mean)) + ((array[3] - mean) * (array[3] - mean)) + ((array[4] - mean) * (array[4] - mean));
 	return result1;
 }
 void printResults(double mean, double variance, double stddev){

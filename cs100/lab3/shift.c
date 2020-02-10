@@ -23,15 +23,15 @@ int main( ) {
 	printf("%d and %d and %d\n", x, y, z);	// should print 1 and 2 and 3
 	return 0;
 }
-void shiftLeft(int *a, int *b, int *c){
-	int placeholder=*a;
-	*a=*b;
-	*b=*c;
-	*c=placeholder;
+void shiftLeft(int *a, int *b, int *c) {
+	int placeholder = *a;
+	*a = *b;
+	*b = *c;
+	*c = placeholder;
 }
-void shiftRight(int *x, int *y, int *z){
-	int placeholder1=*z;
-	*z=*y;
-	*y=*x;
-	*x=placeholder1;
+void shiftRight(int *x, int *y, int *z) {
+	int placeholder1 = *z;
+	*z = *y;
+	*y = *x;
+	*x = placeholder1;
 }
