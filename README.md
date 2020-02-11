@@ -57,9 +57,29 @@ My second programming course in college and it contains some of my assignments.
 
 Details of each project are listed here:
 
-    TBD
-    TBD
-    TBD
+    Exams
+    Labs
+        lab 1
+        lab 2
+        lab 3
+        lab 4
+    Lecture Examples
+        big5
+        bubblesort
+        oop
+        oop2
+    Lectures
+    Projects
+        Project 1 Stuff
+        Project 2 Stuff
+        Project 3 Stuff
+        Project 4 Stuff
+        Project 5 Stuff
+    Raychel's 2nd Attempt
+        project1
+        project2
+        project6
+    
 
 other_projects:
 
