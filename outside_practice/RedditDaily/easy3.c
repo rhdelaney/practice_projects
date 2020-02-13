@@ -7,34 +7,38 @@
 //we can work on it later give yourself a break
 //DO IT LATER
 
-char *read(FILE *fp){
-	int a=0;
+char *read(FILE *fp) {
+	int a = 0;
 	char *message;
-	while(!feof(fp)){
-		message[a]=readToken(fp);	
-			a++;}
+	while (!feof(fp)) {
+		message[a] = readToken(fp);
+		a++;
+	}
 	return message;
 }
-void encrypt(FILE *fp, char *m){
+void encrypt(FILE *fp, char *m) {
 	int n;
 	printf("How many letters would you like to rotate by?");
 	scanf("%d", n);
-	for(a=0;a<
+	for (a = 0;a < strlen(n);a++) {
+		m[a] = m[a]+n;
 	}
+	return m;
+}
 void decrypt(FILE *fp, char *m);
 
 
-int main(){
+int main() {
 	char job[10];
 	printf("Would you like to encrypt or decrypt?\n");
 	scanf("%s", job);
-	FILE *fp=fopen(argv[1],"r");
-	char *m=read(FILE *fp);
-	if(strcmp(job, "encrypt")==0){
+	FILE *fp = fopen(argv[1],"r");
+	char *m = read(FILE *fp);
+	if(strcmp(job, "encrypt") == 0) {
 		encrypt(fp, m);
-	if(strcmp(job, "decrypt")==0){
+	if(strcmp(job, "decrypt") == 0) {
 		decrypt(fp, m);
-		}
+	}
 	fclose(fp);
 	return 0;
 }

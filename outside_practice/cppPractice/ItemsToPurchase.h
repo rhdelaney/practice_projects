@@ -5,10 +5,12 @@
 using namespace std;
 
 class ItemToPurchase {
+	
 private:
 	string itemName;
 	int itemPrice;
 	int itemQuantity;
+
 public:
 	ItemToPurchase();
 	void SetName();
