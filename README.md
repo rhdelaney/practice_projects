@@ -81,6 +81,32 @@ Details of each project are listed here:
         project6
     
 
-other_projects:
+outside_practice:
+
+    cppPractice
+        fire
+        hello
+        ItemsToPurchase
+        Prime1
+        section1
+        section2
+        section3
+        section4
+    exam1
+        one
+        two
+        test
+    javaproject
+        FibonacciCalculator project
+    jobTest
+        interview test for IP address options for 32 & 16 & 8 option etc
+    RedditDaily
+        Did the reddit daily problems briefly (favorite is definitely "easy2pt1")
+    extra:
+        dList
+        exam1
+        main
+        math
+        section4
 
 Placeholder until I can organize where these assignments go.
