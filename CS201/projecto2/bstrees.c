@@ -16,19 +16,19 @@
 
 void readCorpusV(vbst *tree, FILE *fp) {
     string *s = grabStr(fp);
-    while(s != NULL || !feof(fp)) {
-        if(s != NULL) { //&& !findVBST(tree, str) maybe noooottttt lol this is why i got no freqqq-ing frequency
+    while (s != NULL || !feof(fp)) {
+        if (s != NULL) { //&& !findVBST(tree, str) maybe noooottttt lol this is why i got no freqqq-ing frequency
             insertVBST(tree, s);
             //printf("%s\n", getString(s));
         }
-        s=grabStr(fp);
+        s = grabStr(fp);
     }
   //printf("finished Corpus");
 }
 void readCorpusR(rbt *tree, FILE *fp) {
     string *s = grabStr(fp);
-    while(s != NULL || !feof(fp)) {
-        if(s != NULL) { //&& !findRBT(tree, str) lol plz give me a treee thx homie
+    while (s != NULL || !feof(fp)) {
+        if (s != NULL) { //&& !findRBT(tree, str) lol plz give me a treee thx homie
             insertRBT(tree,s);
             //continue;
         }
@@ -38,15 +38,15 @@ void readCorpusR(rbt *tree, FILE *fp) {
 }
 void readCommands(queue *q, FILE *fp) {
     string *s = grabStr(fp);
-    while(s!= NULL || !feof(fp)) {
+    while (s != NULL || !feof(fp)) {
     //printf("we wilding in this while\n");
-        if(s== NULL) {
+        if (s == NULL) {
             enqueue(q, NULL);
         }
-        else{
+        else {
             enqueue(q,s);
         }
-        s=grabStr(fp);
+        s = grabStr(fp);
     //printf(" how about after ");
     }
   //printf("we left commands function");
@@ -54,17 +54,17 @@ void readCommands(queue *q, FILE *fp) {
 
 int main(int argc, char **argv) {
     //printf("In Main:\n");
-    if(argc!=4 && argc!=5) {
+    if (argc != 4 && argc != 5) {
         //fprintf(stderr, "Invalid # of command arguments.\n");
         exit(-1);
-    }  
+    }
     FILE *corpus = fopen(argv[2], "r");
     FILE *commands = fopen(argv[3], "r");
     FILE *fp;
-    if(argc == 5){
+    if (argc == 5) {
         fp = fopen(argv[4], "w");
     }
-    else{
+    else {
         fp = stdout;
     }
     queue *q = newQueue(displayString);
@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
     //printf("made a queue right?\n");
     //printf("read some commands in plz?\n");
     //Gather and process command-line args.
-    if(argv[1][1]=='v'){
+    if (argv[1][1] == 'v') {
         //printf("I'm in the v level rn\n");
         // Read the corpus.
         //queue *q = newQueue(displayString);
@@ -81,22 +81,23 @@ int main(int argc, char **argv) {
         //readCommands(q, commands);
         vbst *tree = newVBST(displayString, stringComparator);
         readCorpusV(tree, corpus);
-        while(sizeQueue(q)) {
+        while (sizeQueue(q)) {
            //printf("i'm in the while atm\n");
             char command = getString(dequeue(q))[0];
             switch(command) {
                 case 'i':{
                     //printf("we are in insert V");
                     string *str = dequeue(q);
-                    if(str == NULL){
+                    if (str == NULL) {
                         break;
                     }
                     char *s = getString(str);
                     clnStr(s);
                     setString(str, s);
                     insertVBST(tree, str);
-                    break;}
-                case 'd':{ 
+                    break;
+                }
+                case 'd':{
                     //printf("we are breaking here specifically");
                     string *str = dequeue(q);
                     /*char *s = getString(str);
@@ -110,7 +111,8 @@ int main(int argc, char **argv) {
                         break;
                     }*/
                     deleteVBST(tree, str);
-                    break;}
+                    break;
+                }
                 case 'f':{
                 //frequency
                     //printf("In frequency\n");
@@ -119,62 +121,70 @@ int main(int argc, char **argv) {
                     clnStr(s);
                     setString(str, s);*/
                     fprintf(fp,"Frequency of \"%s\": %d\n",getString(str),findVBST(tree,str));
-                    break;}
-                case 's':{ 
+                    break;
+                }
+                case 's':{
                     //printf("show dat tree\n");
                     displayVBST(fp, tree);
-                    break;}
-                case 'r':{ 
+                    break;
+                }
+                case 'r':{
                 //report stats
                     //printf("in stats\n");
                     statisticsVBST(tree,fp);
-                    break;}
+                    break;
+                }
             }
         }
     }
-    if(argv[1][1]=='r'){
+    if (argv[1][1] == 'r') {
         //red-black //For RBT
         //queue *q = newQueue(displayString);
         //readCommands(q, commands);
         rbt *tree = newRBT(displayString, stringComparator);
         readCorpusR(tree, corpus);
-        while(sizeQueue(q)) {
+        while (sizeQueue(q)) {
             char command = getString(dequeue(q))[0];
             switch(command) {
                 case 'i':{
                     string *str = dequeue(q);
-                    if(str == NULL){ 
+                    if (str == NULL) {
                         break;
                     }
                     char *s = getString(str);
                     clnStr(s);
                     setString(str, s);
                     insertRBT(tree, str);
-                    break;}
+                    break;
+                }
                 case 'd':{ //not in use atm
                     string *str = dequeue(q);
                     deleteRBT(tree, str);
-                    break;}
+                    break;
+                }
                 case 'f':{
                 //frequency
                     string *s = dequeue(q);
                     fprintf(fp,"Frequency of \"%s\": %d\n",getString(s),findRBT(tree,s));
-                    break;}
-                case 's':{ 
+                    break;
+                }
+                case 's':{
                     //show tree
                     displayRBT(fp, tree);
-                    break;}
-                case 'r':{ 
+                    break;
+                }
+                case 'r':{
                     //report stats
                     statisticsRBT(tree,fp);
-                    break;}
+                    break;
+                }
             }
         }
     }
     // close files.
     fclose(corpus);
     fclose(commands);
-    if(argc == 5){
+    if (argc == 5) {
         fclose(fp);
     }
     return 0;
