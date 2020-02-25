@@ -1,0 +1,39 @@
+creating the tree
+doing a bunch of inserts
+(t (quote size)) is 10
+(t (quote walk)) is 7
+(t (quote next)) is 8
+(t (quote next)) is 6
+(t (quote next)) is 2
+(t (quote next)) is 3
+(t (quote next)) is 5
+(t (quote next)) is 10
+(t (quote next)) is 1
+(t (quote next)) is 9
+(t (quote next)) is 4
+(t (quote next)) is nil
+(t (quote find) "pteh" lusth-eq) is 2
+(t (quote find) "ecvq" lusth-eq) is 4
+(t (quote find) "zfpb" lusth-eq) is nil
+(t (quote find) "drpa" lusth-eq) is nil
+(t (quote find) "gyhi" lusth-eq) is 9
+(t (quote find) "vdgd" lusth-eq) is nil
+(t (quote find) "gclr" lusth-eq) is nil
+(t (quote walk)) is 7
+(t (quote next)) is 8
+(t (quote next)) is 6
+(t (quote next)) is 2
+(t (quote next)) is 3
+(t (quote next)) is 10
+(t (quote next)) is 9
+(t (quote next)) is nil
+(t (quote next)) is nil
+(t (quote next)) is nil
+(t (quote next)) is nil
+(t (quote find) "hwrl" lusth-eq) is nil
+(t (quote find) "ldpt" lusth-eq) is 3
+(t (quote find) "umdu" lusth-eq) is 6
+(t (quote find) "xhwu" lusth-eq) is nil
+(t (quote find) "wadf" lusth-eq) is nil
+(t (quote find) "iegc" lusth-eq) is nil
+(t (quote find) "roir" lusth-eq) is nil

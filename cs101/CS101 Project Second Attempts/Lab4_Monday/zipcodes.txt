@@ -1,0 +1,26 @@
+Zip    City             State Lat Long
+10001  New York           NY  41  -74
+90001  Los Angeles        CA  34  -118
+77001  Houston            TX  30  -95
+60601  Chicago            IL  42  -88
+78201  San Antonio        TX  29  -98
+94101  San Francisco      CA  38  -122
+19101  Philadelphia       PA  40  -75
+85001  Phoenix            AZ  33  -112
+95101  San Jose           CA  37  -122
+48201  Detroit            MI  42  -83
+43201  Columbus           OH  40  -83
+46201  Indianapolis       IN  40  -86
+2201   Boston             MA  42  -71
+75201  Dallas             TX  33  -97
+64101  Kansas City        MO  39  -95
+73301  Austin             TX  30  -98
+80201  Denver             CO  40  -105
+92101  San Diego          CA  33  -117
+73101  Oklahoma City      OK  35  -97
+55401  Minneapolis        MN  45  -93
+20001  Washington         DC  39  -77
+30301  Atlanta            GA  34  -84
+31901  Columbus           GA  32  -85
+66101  Kansas City        KS  39  -95
+35401  Tuscaloosa         AL  33  -88

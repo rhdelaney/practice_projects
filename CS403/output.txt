@@ -1,0 +1,7 @@
+1NF
+3NF
+3NF
+2NF
+3NF
+1NF
+2NF

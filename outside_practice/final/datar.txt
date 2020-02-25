@@ -1,0 +1,32 @@
+DocID:420 fucks:2 hoes:1
+DocID:420 fucks:1 hoes:1
+DocID:69 bitches:2 thots:1
+DocID:69 money:2 hoes:1
+DocID:1 bitches:2 food:1
+DocID:12 fucks:1 money:3
+money: 1 DocID:1 pain: 5 hoes: 3
+DocID:205 bitches:5 pain:20
+fucks:10  money:555 DocID:777 hoes:30
+DocID:555 pain:7 bitches:20
+pain:25 food:222 DocID:222
+DocID:55 food:7 hoes:21
+bitches:26 DocID:32 thots:333
+food:26 DocID:2 fucks:333
+bitches:26 DocID:422 pain:333
+DocID:5 thots:5 pain:20
+fucks:10  money:555 DocID:77 pain:20
+DocID:45 pain:7 bitches:20
+thots:25 money:222 DocID:232
+DocID:505 fucks:7 hoes:21
+DocID:20 cash:5 thots:20
+cash:10  money:555 DocID:777 hoes:30
+DocID:55 thots:7 hoes:20
+pain:25 food:222 DocID:26
+DocID:525 food:7 hoes:21
+bitches:26 DocID:2 thots:333
+DocID:24 problems:7 bitches:20
+pain:25 problems:222 DocID:22
+DocID:53 food:7 hoes:21
+bitches:26 DocID:90 thots:333
+problems:26 DocID:67 fucks:333
+bitches:26 DocID:4 problems:99

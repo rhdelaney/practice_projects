@@ -1,0 +1,3 @@
+(println "trying (twinPrimes 6)")
+(stream-display 27 (twinPrimes 6))
+(println)

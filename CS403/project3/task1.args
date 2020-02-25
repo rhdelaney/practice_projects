@@ -1,0 +1,10 @@
+(define (f x)
+(define (g y)
+(define zz 3)
+(staticScope 3 this)
+(+ x y)
+)
+g
+)
+(define z (f 3))
+(z 4)

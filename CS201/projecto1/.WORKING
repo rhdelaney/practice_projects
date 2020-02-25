@@ -1,0 +1,31 @@
+/Users/owner/Desktop/CS201/projecto1
+Fri Feb 10 15:21:02 CST 2017
+Makefile			sll.o
+WORKING				sqsort
+comparator.c			sqsort.c
+comparator.h			sqsort.o
+comparator.o			stack.c
+dll.c				stack.h
+dll.h				stack.o
+dll.o				string.c
+integer.c			string.h
+integer.h			string.o
+integer.o			t-int1.txt
+jbmResults.txt			t-int2.txt
+newResults.txt			t-int3.txt
+queue.c				t-int4.txt
+queue.h				t-int5.txt
+queue.o				t-real1.txt
+readin.c			t-real2.txt
+readin.h			t-real3.txt
+readin.o			t-str1.txt
+real.c				t-str2.txt
+real.h				t-str3.txt
+real.o				testInteger1.txt
+results.txt			testInteger2.txt
+rhdelaney@crimson.ua.edu	testInteger3.txt
+scanner.c			testInteger4.txt
+scanner.h			testReal1.txt
+scanner.o			testReal2.txt
+sll.c				testString1.txt
+sll.h				testString2.txt

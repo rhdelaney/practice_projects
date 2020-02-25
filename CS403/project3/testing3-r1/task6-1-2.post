@@ -1,0 +1,3 @@
+(println "trying (pfs 2 3 7 23)")
+(stream-display 17 (apply pfs '(2 3 7 23)))
+(println)

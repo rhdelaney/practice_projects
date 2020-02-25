@@ -1,0 +1,3 @@
+CONCEPT:
+-> so in theory you subtract by the number and add that sub to the "count" (you can use big+ for it)
+-> then you keep cycling through subtraction until -/0 and then you return the count

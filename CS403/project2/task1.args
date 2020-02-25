@@ -1,0 +1,2 @@
+(lambda (x) (inspect x))
+((0 3))

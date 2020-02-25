@@ -1,0 +1,40 @@
+ABCDF A BD
+(A)(B)
+(A)(F)
+(A)(D)
+(BD)(A)
+(B)(C)
+(BD)(F)
+x
+ABC AB
+(AB)(C)
+x
+AB A
+(A)(B)
+x
+ABCDEFG B
+(B)(A)
+(B)(C)
+(B)(D)
+(B)(E)
+(E)(F)
+(E)(G)
+x
+ABC A
+(A)(B)
+(A)(C)
+x
+ABCDEF AB
+(AB)(C)
+(A)(D)
+(B)(E)
+(B)(E)
+(B)(F)
+x
+ABCDEFG B
+(B)(A)
+(B)(C)
+(B)(D)
+(B)(E)
+(E)(F)
+(E)(G)

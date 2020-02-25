@@ -1,0 +1,11 @@
+The ASCII character set includes control characters, letters, digits, punctuation, and more.
+Characters 0 to 31 are control characters which are generally non-printable.
+Character 32 is the space or blank.
+Characters 33 to 47 are punctuation symbols !"#$%&'()*+,-./
+Characters 48 to 57 are the digits 0123456789.
+Characters 58 to 64 are more punctuation symbols :;<=>?@
+Characters 65 to 90 are the uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+Characters 91 to 96 are more punctuation symbols [\]^_`
+Characters 97 to 122 are the lowercase letters abcdefghijklmnopqrstuvwxyz.
+Characters 123 to 126 are more punctuation symbols {|}~
+Character 127 is another control character.

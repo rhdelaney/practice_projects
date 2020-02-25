@@ -1,0 +1,29 @@
+CHANGE LOG STATUS - 11/3/2017
+
+
+#1
+
+
+#2->
+tentatively done(aka it works but idk if it's unbreakable)...idk why but I'm worried about that square multiply case in spec I've asked in the forum for clarity and I'll report back when I figure it all out
+
+#3
+
+
+#4
+
+
+#5
+
+
+#6
+
+
+#7->
+finished and working :D
+
+#8->
+finished and working :D
+
+#9 ->
+finished and working :D

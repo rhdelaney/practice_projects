@@ -1,0 +1,24 @@
+setting latitude
+(get-value-safe mylat) is 61
+(get-value-safe myspeed) is no-value
+(get-value-safe myheight) is no-value
+setting velocity
+(get-value-safe mylat) is 61
+(get-value-safe myspeed) is 11997
+(get-value-safe myheight) is 0.6650172861
+forgetting speed
+(get-value-safe mylat) is 61
+(get-value-safe myspeed) is no-value
+(get-value-safe myheight) is no-value
+setting height
+(get-value-safe mylat) is 61
+(get-value-safe myspeed) is 5096.2041215
+(get-value-safe myheight) is 0.1200000000
+forgetting latitude
+(get-value-safe mylat) is no-value
+(get-value-safe myspeed) is no-value
+(get-value-safe myheight) is 0.1200000000
+setting latitude
+(get-value-safe mylat) is 4
+(get-value-safe myspeed) is 5085.9376009
+(get-value-safe myheight) is 0.1200000000

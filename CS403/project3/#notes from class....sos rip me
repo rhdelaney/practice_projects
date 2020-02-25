@@ -1,0 +1,31 @@
+#notes from class....sos rip me 
+(define (s-display n s)
+(cond
+((= n 0) ‘ok)
+(else
+(Println (scar s))
+(S-display (- n 1) (s-cdr s)))
+)
+)
+)
+
+(Define (sadd s t)
+(Cons-stream
+(+ (stream-car s)
+(Stream-car t))
+(Sadd (stream-cdr s) (stream-cdr t)))))
+
+(Defuse (shuffle s t)
+(scons
+(Scar s) (shuffle t (scdr s))
+)
+
+(Define (sieve s)
+(scons
+(Scar s)
+(Sieve (sfilter (lambda (x) 
+(!= (% X (scar s)) 0))
+(Scdr s))
+)
+)
+)

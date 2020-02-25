@@ -1,0 +1,22 @@
+
+(define (a + x y)
+    (+ (x y) (b (c +)))
+    )
+(define (b @)
+    (display (quote (+ + +)))
+    (* (g - @) (c + @ @) (d (car @)))
+    )
+(define (c op quote)
+    (op quote quote)
+    )
+(define (d items)
+    (g - items)
+    )
+
+(include "pretty.lib")
+(compile a)
+(pretty a)
+(pretty b)
+(pretty c)
+(pretty d)
+

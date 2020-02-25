@@ -1,0 +1,15 @@
+(define (level # sym)
+  (define (getCount floor env sym)
+    (if (null? env)
+      'UNDEFINED
+      (if (member? sym (cadr env))
+        floor
+        (getCount (+ floor 1) (env'__context) sym))))
+  (getCount 0 # sym))
+ (define (main)
+  (define a (lambda (x) (level 'x)))
+  (define level+ (level '+))
+  (inspect (a 1))
+  (println "\tIt should be 0")
+  (inspect level+)
+  (println "\tIt should be 3"))

@@ -1,0 +1,17 @@
+#[environment L0]
+    y : v1
+    x : 3
+#[environment L1]
+    y : v2
+    x : 2
+#[environment L2]
+    m : 58
+    wcr : 58
+    x : 62
+    y : v3
+    x : 1
+#[environment L3]
+    y : -47
+    i : -38
+    y : v4
+    x : 0
