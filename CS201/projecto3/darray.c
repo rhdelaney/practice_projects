@@ -8,69 +8,69 @@ struct DArray{
 	void (*display)(FILE *,void *);
 };
 
-DArray *newDArray(void (*display)(FILE *,void *)){
-	DArray *a=malloc(sizeof(DArray));
+DArray *newDArray(void (*display)(FILE *,void *)) {
+	DArray *a = malloc(sizeof(DArray));
 	//a->array=NULL;
-	a->array=malloc(sizeof(void *)* 1);
-	a->capacity=1;
-	a->size=0;
-	a->display=display;
-	a->array[0]=NULL;
+	a->array = malloc(sizeof(void *)* 1);
+	a->capacity = 1;
+	a->size = 0;
+	a->display = display;
+	a->array[0] = NULL;
 	return a;
 }
-void insertDArray(DArray *a,void *v){
-	if(a->size==a->capacity){
-		a->capacity*=2;
-		a->array=realloc(a->array,sizeof(void *) * a->capacity);
+void insertDArray(DArray *a,void *v) {
+	if (a->size == a->capacity) {
+		a->capacity *= 2;
+		a->array = realloc(a->array,sizeof(void *) * a->capacity);
 		//a->size++;
 	}
-	
-	a->array[a->size++]= v;
+
+	a->array[a->size++] = v;
 }
 //STRICTLY LESS THAN 25% not == :D
-void *removeDArray(DArray *a){
-	if(a->size==0){
+void *removeDArray(DArray *a) {
+	if (a->size == 0) {
 		exit(-1);
 	}
-	void *v=a->array[a->size-1];
-	a->array[a->size-1]=NULL;
+	void *v = a->array[a->size - 1];
+	a->array[a->size - 1] = NULL;
 	a->size--;
-	if(a->size < ((double)a->capacity/4.0) && a->capacity!=1){
-		a->capacity/=2;
-		a->array=realloc(a->array,sizeof(void *) * a->capacity);
+	if (a->size < ((double)a->capacity / 4.0) && a->capacity != 1) {
+		a->capacity /= 2;
+		a->array = realloc(a->array,sizeof(void *) * a->capacity);
 	}
 	return v;
 }
-void *getDArray(DArray *a,int index){
+void *getDArray(DArray *a,int index) {
 	return a->array[index];
 }
-void setDArray(DArray *a,int index,void *value){
-	if(index==a->size){
+void setDArray(DArray *a,int index,void *value) {
+	if (index == a->size) {
 		insertDArray(a,value);
 	}
-	else if(index<a->size){
-		a->array[index]=value;
+	else if (index < a->size) {
+		a->array[index] = value;
 	}
 }//The setDArray method should call insertDArray if the index to be set is the size.
-//If it is less than the size, the method should just replace the current value. 
-int sizeDArray(DArray *a){
+//If it is less than the size, the method should just replace the current value.
+int sizeDArray(DArray *a) {
 	return a->size;
 }
-void displayDArray(FILE *fp,DArray *a){
-	if(sizeDArray(a)==0){
+void displayDArray(FILE *fp,DArray *a) {
+	if (sizeDArray(a) == 0) {
 		fprintf(fp,"[");
-		fprintf(fp, "][%d]",((a->capacity) - (a->size) ));
+		fprintf(fp, "][%d]",((a->capacity) - (a->size)));
 		return;
 	}
-	else{
-		int num=sizeDArray(a);
+	else {
+		int num = sizeDArray(a);
 		fprintf(fp,"[");
-		for(int i=0;i<num;i++){
+		for (int i = 0;i < num; i++) {
 			a->display(fp,a->array[i]);
-			if(i+1<num){
+			if (i + 1 < num) {
 				fprintf(fp, ",");
 			}
 		}
-		fprintf(fp, "][%d]",((a->capacity) - (a->size) ));
+		fprintf(fp, "][%d]",((a->capacity) - (a->size)));
 	}
 }

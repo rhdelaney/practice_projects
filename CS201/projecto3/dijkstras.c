@@ -22,7 +22,7 @@ void addEdge(Graph* g, int u, int v, int w) {
     if(u == v) return;
     // else insert the edge
 
-    // please don't forget this part, I know a 
+    // please don't forget this part, I know a
     // professor who forgot this.
     Edge* e = getEdge(g, u, v);
     if(e != NULL) {
@@ -38,7 +38,7 @@ I also lucked out that someone had a good guide for binomial from last year when
 tbh prims would have beeen PRIMEEEEE to do
 
 
-Notes for Fran on this project:
+Notes on this project:
 	-for the display :
 -use the pseudo code I sent you but make sure that you use getSubHeap not getDArray
 also the if statement for checking if the next is not Null only is printing a space the rest is done in the else :D
@@ -57,15 +57,15 @@ also the if statement for checking if the next is not Null only is printing a sp
 -give it some values and shit you deem as “useful” for solving Dijkstras (start, end, weights are usually good but you need to read code and decided what you want)
 		-second we make a adjList
 			-read the info in
--clean that ish out and remember sometimes the weight is given(aka sometimes 3 and “;” other times 2 and “;”  when 2 assume weight is 1) 
--send the info to insert into the adjList (both : (start, end, weight) 
+-clean that ish out and remember sometimes the weight is given(aka sometimes 3 and “;” other times 2 and “;”  when 2 assume weight is 1)
+-send the info to insert into the adjList (both : (start, end, weight)
 and (end, start, weight)
-		-third you wanna work on where that booger of info goes…there is lots of 
+		-third you wanna work on where that booger of info goes…there is lots of
 adj matrix/list info out there you can use to model it after
 -be sure to check if it’s already in the list....
 -if it is grab it and update it’s info accordingly
 -else add it
-		
+
 */
 
 
@@ -84,42 +84,42 @@ Second Tree
 
 */
 static void displayForest(FILE *fp, queue *visited) {
-	if(sizeQueue(visited)==0){
+	if (sizeQueue(visited) == 0) {
 		//printf("you better not print hoe\n");
 		return;
 	}
-	Binomial *b=newBinomial(displayVert,compareVert,update);
-	int size=sizeQueue(visited);
-	int maxS=0;
+	Binomial *b = newBinomial(displayVert,compareVert,update);
+	int size = sizeQueue(visited);
+	int maxS = 0;
 	//vert into a binomial
-	for(int i=0;i<size;i++){
-		Vert *v= (Vert *) dequeue(visited);
-		if(v->steps > maxS){
+	for (int i = 0; i < size; i++) {
+		Vert *v = (Vert *) dequeue(visited);
+		if (v->steps > maxS) {
 			//printf("update them steppsss\n");
-			maxS=v->steps;
+			maxS = v->steps;
 		}
 		insertBinomial(b,v);
 	}
 	//level into queue fuckkk should have used DArray
-	queue *level[maxS+1];
-	for(int i =0;i<=maxS;i++){
-		level[i]=newQueue(displayVert);
+	queue *level[maxS + 1];
+	for (int i = 0; i <= maxS; i++) {
+		level[i] = newQueue(displayVert);
 	}
 	// vertex from the heap into its queue in level.
 	// binomial min -> sorts it to work in my favor
-	for(int i=0;i<size;i++){
-		Vert *v=(Vert *) extractBinomial(b);
+	for (int i = 0; i < size; i++) {
+		Vert *v = (Vert *) extractBinomial(b);
 		enqueue(level[v->steps],v);
 	}
 	// print out queue per lvl
-	for(int i=0;i<=maxS;i++){
+	for (int i = 0; i <= maxS; i++) {
 		fprintf(fp,"%d : ", i);
 		//printf("we are right here \n");
-		while(sizeQueue(level[i]) != 0){
+		while (sizeQueue(level[i]) != 0) {
 			//printf("wtf familia\n");
-			Vert *v=(Vert *) dequeue(level[i]);
+			Vert *v = (Vert *) dequeue(level[i]);
             displayVert(stdout, v);
-			if(sizeQueue(level[i]) > 0){
+			if (sizeQueue(level[i]) > 0) {
 				//printf("we have a sibling\n");
 				fprintf(fp," ");
 			}
@@ -128,37 +128,37 @@ static void displayForest(FILE *fp, queue *visited) {
 	}
 	fprintf(fp,"----\n");
 }
-static void dijkstra(FILE *fp, DArray *adjList, Binomial *heap){
+static void dijkstra(FILE *fp, DArray *adjList, Binomial *heap) {
 	//printf("in dijkstra\n");
-	queue *visited=newQueue(displayVert);
-	Vert *min=getMinVert(adjList);
+	queue *visited = newQueue(displayVert);
+	Vert *min = getMinVert(adjList);
 	//printf("got the min losers\n");
-	min->dist=0;
-	min->prev=min;
-	min->steps=0;
-	while(sizeBinomial(heap)!= 0){
+	min->dist = 0;
+	min->prev = min;
+	min->steps = 0;
+	while (sizeBinomial(heap) != 0) {
 		//printf("In dijk while loooop for heap\n");
-		Vert *u=(Vert *) extractBinomial(heap);
-		if(u->prev==NULL){
+		Vert *u = (Vert *) extractBinomial(heap);
+		if (u->prev == NULL) {
 			//this is the end of a tree -> print it and break off to the next one (aka disjointed set)
-			u->dist=0;
+			u->dist = 0;
 			displayForest(fp,visited);
-			visited=newQueue(displayVert);
+			visited = newQueue(displayVert);
 		}
 		enqueue(visited,u);
-		u->visited=1;
-		for(int i=0; i<sizeDArray(u->neighs); i++){
-			Neigh *n=(Neigh *) getDArray(u->neighs, i);
-			Vert *v=findNeighVert(adjList, n);
+		u->visited = 1;
+		for (int i = 0; i < sizeDArray(u->neighs); i++) {
+			Neigh *n = (Neigh *) getDArray(u->neighs, i);
+			Vert *v = findNeighVert(adjList, n);
 			//printf("in the for loop\n");
-			if(v->visited!= 1){
+			if (v->visited != 1) {
 				//printf("not visited\n");
-				int distance=u->dist + n->weight;
-				if(distance<v->dist){
+				int distance = u->dist + n->weight;
+				if (distance < v->dist) {
 					//printf("dis<v->dis\n");
-					v->prev=u;
-					v->dist=distance;
-					v->steps=v->prev->steps + 1;
+					v->prev = u;
+					v->dist = distance;
+					v->steps = v->prev->steps + 1;
 					decreaseKeyBinomial(heap,v->bnode,v);
 					//printf("are we breakkkking\n");
 				}
@@ -168,8 +168,8 @@ static void dijkstra(FILE *fp, DArray *adjList, Binomial *heap){
 	//Show me dat treeeeeee
 	displayForest(fp, visited);
 }
-int main(int argc, char const *argv[]){
-	if(argc < 2) {
+int main(int argc, char const *argv[]) {
+	if (argc < 2) {
 		//fprintf(stderr, "Not enough arguments.\n");
 		exit(1);
 	}
@@ -180,11 +180,11 @@ int main(int argc, char const *argv[]){
 	//printf("Filling up the list\n");
 	fillList(adList, fp);
 	//printf("we made the list\n");
-	Binomial *heap=newBinomial(displayVert, compareVert, update);
+	Binomial *heap = newBinomial(displayVert, compareVert, update);
 	//printf("insert into binomial\n");
-	for(int i=0;i<sizeDArray(adList);i++){
-		Vert *v=getDArray(adList,i);
-		v->bnode=insertBinomial(heap, v);
+	for (int i = 0; i < sizeDArray(adList); i++) {
+		Vert *v = getDArray(adList,i);
+		v->bnode = insertBinomial(heap, v);
 	}
 	//displayBinomial(stdout, heap);
 	// Run dijkstra's algorithm on the heap.
