@@ -5,8 +5,6 @@ Given an integer array nums, find the contiguous subarray (containing at least o
 
 A subarray is a contiguous part of an array.
 
-
-
 Example 1:
 
 Input: nums = [-2,1,-3,4,-1,2,1,-5,4]

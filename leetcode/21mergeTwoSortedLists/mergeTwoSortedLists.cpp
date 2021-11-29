@@ -14,7 +14,9 @@ public:
         ListNode result;
         ListNode *temp = &result;
         int lowest = 0;
-        while (l1!=NULL && l2!=NULL) {
+        //loop through the two lists until null adding
+        //nodes in order
+        while (l1 != NULL && l2 != NULL) {
             if (l1->val < l2->val) {
                 temp->next = l1;
                 l1 = l1->next;
@@ -25,13 +27,14 @@ public:
             }
             temp = temp->next;
         }
-       if(l1 == NULL) {
+       //once one list is null add the rest of the
+       //list onto the resulting list
+       if (l1 == NULL) {
         temp->next = l2;
        }
        else {
         temp->next = l1;
        }
-
         return result.next;
     }
 };
