@@ -1,5 +1,5 @@
-# college_projects
-All mini assessments and projects done in college
+# practice_projects
+All mini assessments and projects
 
 cs100:
 
