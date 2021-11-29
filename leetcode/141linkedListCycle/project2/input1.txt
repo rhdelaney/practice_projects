@@ -1,0 +1,26 @@
+A build 2 : 2,3 : 3,4,5,6,7,8
+B build 2 : 3,2 : 3,4,5,6,7,8
+C apply A B +
+D apply A B –
+E apply A B *
+F apply A B %
+G apply A B max
+H apply A B min
+I cross A B +
+J cross A B –
+K cross A B *
+L cross A B %
+M cross A B max
+N cross A B min
+O join A B +
+P join A B –
+Q join A B *
+R join A B %
+S join A B max
+T join A B min
+U reduce A + 0
+V reduce A * 0
+W reduce A max 0
+X reduce A min 0
+Y catenate A B 0
+Z catenate A B 1
