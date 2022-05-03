@@ -1,5 +1,8 @@
 class Solution {
 public:
+//Run Time Complexity:
+//Time: O(m*n)
+//Space: O(n^2)
     string tictactoe(vector<vector<int>>& moves) {
         vector<vector<int>> v(3,vector<int>(3, -1));
         for (int i = 0; i<moves.size();i++) {
