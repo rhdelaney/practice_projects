@@ -1,8 +1,9 @@
 class Solution {
-    public int missingNumber(int[] nums) {
-        int expectedSum = nums.length*(nums.length + 1)/2;
+public:
+    int missingNumber(vector<int>& nums) {
+      int expectedSum = nums.size()*(nums.size() + 1)/2;
         int actualSum = 0;
         for (int num : nums) actualSum += num;
         return expectedSum - actualSum;
     }
-}
+};
