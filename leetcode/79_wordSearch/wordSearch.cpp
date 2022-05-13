@@ -3,7 +3,7 @@ public:
     bool exist(vector<vector<char>>& board, string word) {
         bool wordFound = false;
         for (int i = 0; i < board.size(); i++) {
-            for(int j = 0; j<board[0].size(); j++) {
+            for(int j = 0; j < board[0].size(); j++) {
                  if (findWord(board, i, j, word, 0))
                         return true;
             }
