@@ -1,4 +1,4 @@
-/**
+//**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -12,20 +12,20 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        if (root == NULL) {
-            return false;
-        }
-        bool valid = checkValid(root);
-        return valid;
-    }
-    bool checkValid(TreeNode* root) {
-        if (root == NULL) {
+        if (!root) {
             return true;
         }
-        if ((root->left != NULL && root->left->val > root->val) || (root->right != NULL && root->right->val < root->val)) {
+        bool valid = checkValid(root, -1e18,1e18);
+        return valid;
+    }
+    bool checkValid(TreeNode* root,long long int min,long long int max) {
+        if (!root) {
+            return true;
+        }
+        if (root->val>=max || root->val<=min) {
             return false;
         }
-        return checkValid(root->left) && checkValid(root->right);
+        return checkValid(root->left,min,root->val) && checkValid(root->right,root->val,max);
 
     }
 };
