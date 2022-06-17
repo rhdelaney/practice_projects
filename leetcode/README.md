@@ -6,7 +6,6 @@ I primarily use this project to practice leetcode on planes and car rides (which
 
 To Do:
 
-#5
 #39
 #40
 #47
